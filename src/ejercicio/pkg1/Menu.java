@@ -122,39 +122,25 @@ public class Menu {
     }
     
     public static void Ejercicio3(){
-        int num_vacas=0;
-        int peso_vaca=0;
-        int peso_limite_camion=0;
-        int litros_producidos=0;
         
-        int[][] vacas_eligidas= new int[1][4];
-        
-        int produccion_máxima=0;
-        
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Ingrese de vacas que están a la venta");
-        num_vacas=scanner.nextInt();
-        
-        System.out.println("Ingrese el peso máximo que soporta el camión");
-       peso_limite_camion=scanner.nextInt();
-        
-        //Guardado de los datos de la vaca en un arreglo
-        int[][] vacas_en_venta = new int[num_vacas][2];
-        
-        for(int i=0; i<num_vacas;i++){
+        Vaca[] vacas = {
+         new Vaca (223,30),
+         new Vaca (243,34),
+         new Vaca (100,28),
+         new Vaca (200,45),
+         new Vaca (200,31),
+         new Vaca (255,50),
+         new Vaca (2300,29),
+         new Vaca (223,1),
             
-            System.out.println("Ingrese el peso de la vaca en kilogramos");
-            peso_vaca=scanner.nextInt();
-            System.out.println("Ingrese los litros de leche que produce la vaca por día");
-            litros_producidos=scanner.nextInt();
-            
-            vacas_en_venta[i][0]=peso_vaca;
-            vacas_en_venta[i][1]=litros_producidos;
-        }
+        };
         
+        Camion camion_base = new Camion(15, vacas.length);
+        Camion camion_optima = new Camion(15, vacas.length);
+ 
         
-
+        System.out.println("");
     }
+
     
 }
